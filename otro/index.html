@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArbolApp CDMX - Mapa de Árboles Monumentales</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="https://via.placeholder.com/50" alt="Logo de ArbolApp CDMX">
+            <h1>ArbolApp CDMX</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#mapa">Mapa</a></li>
+                <li><a href="#busqueda">Búsqueda</a></li>
+                <li><a href="#reportes">Reportes</a></li>
+                <li><a href="#acerca">Acerca de</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección Inicio -->
+    <section id="inicio">
+        <h2>Bienvenido a ArbolApp CDMX</h2>
+        <p>Conectamos a los habitantes de la Ciudad de México con los beneficios de sus árboles a través de la tecnología y la información.</p>
+    </section>
+
+    <!-- Sección Mapa -->
+    <section id="mapa">
+        <h2>Mapa de Árboles Monumentales</h2>
+        <div id="mapa-interactivo">
+            <!-- Aquí puedes integrar un mapa interactivo con OpenStreetMap o Google Maps -->
+            <iframe
+                width="100%"
+                height="400"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-99.234%2C19.345%2C-99.123%2C19.456&amp;layer=mapnik"
+                style="border: 1px solid black">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Sección Búsqueda -->
+    <section id="busqueda">
+        <h2>Buscar Árboles</h2>
+        <form id="form-busqueda">
+            <input type="text" id="buscar" placeholder="Buscar por especie, ubicación o nombre...">
+            <button type="submit">Buscar</button>
+        </form>
+        <div id="resultados-busqueda">
+            <!-- Aquí se mostrarán los resultados de la búsqueda -->
+        </div>
+    </section>
+
+    <!-- Sección Reportes -->
+    <section id="reportes">
+        <h2>Reportar un Árbol</h2>
+        <form id="form-reporte">
+            <label for="nombre">Nombre del árbol:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="ubicacion">Ubicación:</label>
+            <input type="text" id="ubicacion" name="ubicacion" required>
+
+            <label for="problema">Problema observado:</label>
+            <textarea id="problema" name="problema" rows="4" required></textarea>
+
+            <button type="submit">Enviar Reporte</button>
+        </form>
+    </section>
+
+    <!-- Sección Acerca de -->
+    <section id="acerca">
+        <h2>Acerca de Nosotros</h2>
+        <p><strong>Misión:</strong> Conectar a los habitantes de la Ciudad de México con los beneficios de sus árboles a través de la tecnología y la información, fomentando su cuidado y preservación.</p>
+        <p><strong>Visión:</strong> Ser la plataforma líder en la CDMX para la gestión y promoción del arbolado urbano, contribuyendo a una ciudad más verde, saludable y sostenible.</p>
+        <h3>Nuestro Equipo</h3>
+        <ul>
+            <li>CEO: [Nombre]</li>
+            <li>Desarrollador Frontend: [Nombre]</li>
+            <li>Desarrollador Backend: [Nombre]</li>
+            <li>Diseñador UX/UI: [Nombre]</li>
+            <li>Analista de datos: [Nombre]</li>
+            <li>Community Manager: [Nombre]</li>
+        </ul>
+    </section>
+   <br/>
+<p/>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 ArbolApp CDMX. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts JavaScript -->
+    <script>
+        // Ejemplo de validación del formulario de reportes
+        document.getElementById('form-reporte').addEventListener('submit', function (event) {
+            event.preventDefault();
+            alert('Reporte enviado correctamente.');
+            // Aquí puedes agregar lógica para enviar los datos a un servidor
+        });
+    </script>
+</body>
+</html>
